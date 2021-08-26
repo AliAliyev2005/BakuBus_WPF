@@ -1,0 +1,24 @@
+﻿<Window x:Class="BakuBus_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BakuBus_WPF" 
+        xmlns:map="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="550" Width="900">
+    <Grid>
+        <map:Map
+            CredentialsProvider="{Binding Provider}"
+            Center="40.459264, 50.007092"
+            Mode="Aerial"
+            ZoomLevel="11">
+            
+        </map:Map>
+
+        <TextBox Text="{Binding Text}">
+            
+        </TextBox>
+    </Grid>
+</Window>
